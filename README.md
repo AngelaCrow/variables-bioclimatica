@@ -1,4 +1,4 @@
-# Variables Bioclimatica
+# Variables Bioclimaticas
 
 Con este código puede generar las 19 variables bioclimaticas. 
 
