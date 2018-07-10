@@ -1,8 +1,8 @@
 # Variables Bioclimaticas
 
-Con este código puede generar las 19 variables bioclimaticas. 
+Con este código podrá generar las 19 variables bioclimaticas. 
 
-Necesitan los raster de los 12 meses organizados en tres carpetas:
+Necesitará los raster de los 12 meses organizados en tres carpetas:
 -tmin = Temperatura mínima
 -tmax = Temperatura máxima
 -prec = Precipitación
