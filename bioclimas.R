@@ -1,22 +1,14 @@
-setwd("") #ruta de tu directorio de trabajo
-
 install.packages("dismo")
 install.packages("raster")
 
-
 library(dismo)
-library(raster)
 
-#"prec" corresponde al nombre de la carpeta que tiene los 12 asci de precipitación
+#"prec", "tmax" y "tmin" son carpetas con los raster mensuales de cada variable
+# por ejemplo las que se descargan de esta pagina http://idrisi.uaemex.mx/distribucion/superficies-climaticas-para-mexico
 
-stfiles=list.files("prec",pattern = "*.asc$", full.name=T) 
-prec=stack(stfiles)
-
-stfiles=list.files("tmax", pattern = "*.asc$", full.name=T)
-tmax=stack(stfiles)
-
-stfiles=list.files("tmin",pattern = "*.asc$", full.name=T)
-tmin=stack(stfiles)
+prec<-stack(list.files("prec",pattern = "*.tif$", full.name=T)) 
+tmax<-stack(list.files("tmax", pattern = "*.tif$", full.name=T))
+tmin<-stack(list.files("tmin",pattern = "*.tif$", full.name=T))
 
 dir.create("bios") #crea una carpeta en mi ruta de trabajo
 bio <-biovars(prec, tmin, tmax) 
